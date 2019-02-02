@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_iam_instance_profile" "s3_access_profile" {
   name  = "s3_access"
-  role  = "${aws_iam_role_s3_access_role.name}"
+  role  = "${aws_iam_role.s3_access_role.name}"
 }
 
 resource "aws_iam_role_policy" "s3_access_policy" {
@@ -18,7 +18,7 @@ resource "aws_iam_role_policy" "s3_access_policy" {
     "Statement" : [
       {
         "Effect" : "Allow",
-        "Action" : "s3*",
+        "Action" : "s3:*",
         "Resource" : "*"
       }
     ]
