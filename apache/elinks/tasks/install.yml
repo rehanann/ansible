@@ -1,0 +1,3 @@
+---
+- name: install elinks
+  yum: name=elinks state=latest
