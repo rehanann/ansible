@@ -2,18 +2,3 @@
 import_tasks: install.yml
 import_tasks: configure.yml
 import_tasks: service.yml
-// tasks:
-// - name: install httpd
-//   yum: name=httpd state=latest
-// - name: copy config file
-//   copy: src=/files/httpd.conf dest=/etc/httpd/conf/httpd.conf
-// - name: copy index file
-//   copy: src=/files/index.html dest=/var/www/html/index.html
-//   notify: 
-//   - restart apache
-// - name: restart service
-//   service: name=httpd state=restarted enabled=yes
-
-// handlers: 
-// - name: restart httpd service
-//   service: name=httpd state=restarted
